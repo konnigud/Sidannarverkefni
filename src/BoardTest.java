@@ -12,23 +12,23 @@ import junit.framework.TestSuite;
 import junit.framework.TestCase;
 
 public class BoardTest extends TestCase {
-    public int[] GetValidMoves(){
+    public int[] testGetValidMoves(){
 
     }
 
-    public boolean evaluate(Mark mark){
+    public boolean testEvaluate(Mark mark){
 
     }
 
-    public boolean isFull(){
+    public boolean testIsFull(){
 
     }
 
-    public Object clone(){
+    public Object testClone(){
 
     }
 
-    public Enum<Square> getEnuminator(){
+    public Enum<Square> testGetEnuminator(){
 
     }
 }
