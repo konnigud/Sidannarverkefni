@@ -7,7 +7,7 @@ import sun.plugin2.message.MarkTaintedMessage;
  * Time: 22:04
  * To change this template use File | Settings | File Templates.
  */
-public class Square {
+public class Square implements Cloneable{
 
     private Mark mark;
     private int index;
@@ -22,8 +22,8 @@ public class Square {
         this.index = 0;
     }
 
-    public Board clone(){
-        Square s = this.MemberwiseClone() as Square;
+    public object clone(){
+        Square s = this. as Square;
         s.Mark = new Mark();
         s.Mark = this.mark;
         return s;
