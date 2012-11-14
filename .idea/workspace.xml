@@ -70,7 +70,16 @@
       <file leaf-file-name="Square.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Square.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="27" selection-start="658" selection-end="658" vertical-scroll-proportion="1.0321889">
+            <state line="31" column="27" selection-start="658" selection-end="658" vertical-scroll-proportion="1.0021459">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mark.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Mark.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="12" selection-start="162" selection-end="162" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -496,9 +505,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mark.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="12" selection-start="162" selection-end="162" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Square.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="27" selection-start="658" selection-end="658" vertical-scroll-proportion="1.0321889">
+        <state line="31" column="27" selection-start="658" selection-end="658" vertical-scroll-proportion="1.0021459">
           <folding />
         </state>
       </provider>
