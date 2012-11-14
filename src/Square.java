@@ -18,7 +18,7 @@ public class Square {
         return false;
     }
     public Square(){
-        this.mark = 0;
+        this.mark = Mark.Open;
         this.index = 0;
     }
 
