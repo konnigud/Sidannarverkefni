@@ -22,10 +22,11 @@ public class Square implements Cloneable{
         this.index = 0;
     }
 
-    public object clone(){
-        Square s = this. as Square;
-        s.Mark = new Mark();
-        s.Mark = this.mark;
+    public Object clone(){
+        Square s = new Square();
+
+        s.setMark(this.getMark());
+
         return s;
     }
 
