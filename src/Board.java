@@ -19,10 +19,11 @@ public class Board {
     private Mark winner;
 
     public int[] GetValidMoves(){
-
+        int[] i = {};
+        return i;
     }
 
-    public boolean evaluate(Mark mark){
+    /*public boolean evaluate(Mark mark){
 
     }
 
@@ -36,5 +37,5 @@ public class Board {
 
     public Enum<Square> getEnuminator(){
 
-    }
+    }*/
 }
