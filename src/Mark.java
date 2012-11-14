@@ -8,6 +8,6 @@
  */
 public enum Mark {
     X ,
-    O2,
+    O,
     Open
 }
