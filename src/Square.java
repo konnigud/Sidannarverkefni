@@ -7,13 +7,33 @@
  * Description:
  */
 public class Square {
-// Member Variables:
+    private Mark mark;
+    private int index;
 
-// Enums:
+    public Square() {
+        this.mark = Mark.Open;
+        this.index = 0;
+    }
 
-// Constructors:
+    public boolean IsEmtpy() {
+        if (this.mark == Mark.Open)
+            return true;
+        return false;
+    }
 
-// Functions:
+    public Mark getMark() {
+        return mark;
+    }
 
-// Getters / Setters
+    public void setMark(Mark mark) {
+        this.mark = mark;
+    }
+
+    public int getIndex() {
+        return index;
+    }
+
+    public void setIndex(int index) {
+        this.index = index;
+    }
 }

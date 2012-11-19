@@ -7,52 +7,100 @@
  * Description:
  */
 
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
-public class Board implements Cloneable, Iterator {
+public class Board implements Cloneable {
 
-    private Square[] squares = new Square[9];
+    private Square[] squares;
     private Mark mark;
 
-    public int GetValidMoves()
-    {
-        return -1;
+    public Board() {
+        this.squares = new Square[9];
+
+        for (int i = 0; i < squares.length; i++) {
+            squares[i] = new Square();
+            squares[i].setIndex(i);
+        }
     }
-    public boolean Evaluate(Mark oPolo)
-    {
+
+    public int[] GetValidMoves() {
+        List<Integer> moves = new ArrayList<Integer>();
+
+        for (Square s : squares) {
+            if (s.IsEmtpy())
+                moves.add(s.getIndex());
+        }
+
+        int[] returner = new int[moves.size()];
+
+        for (int i = 0; i < returner.length;i++)
+            returner[i] = moves.get(i);
+
+       return returner;
+    }
+
+    // Evaluates if the board has been won by the player with oPolo as a mark...
+    public boolean Evaluate(Mark oPolo) {
+        //Checking horizontal
+        for (int i = 0; i < 7;i +=3)
+        {
+            if (squares[i].getMark() == squares[i+1].getMark() && squares[i].getMark() == squares [i+2].getMark() && squares[i].getMark() == oPolo)
+                return true;
+        }
+        //Checking vertical
+        for (int i = 0; i < 3; i++)
+        {
+            if (squares[i].getMark() == squares[i+3].getMark() && squares[i].getMark() == squares [i+6].getMark() && squares[i].getMark() == oPolo)
+                return true;
+        }
+        //Checking both diagonals
+        if (squares[0].getMark() == squares[4].getMark() && squares[4].getMark() == squares [8].getMark() && squares[0].getMark() == oPolo)
+            return true;
+        if (squares[2].getMark() == squares[4].getMark() && squares[4].getMark() == squares [6].getMark() && squares[2].getMark() == oPolo)
+            return true;
+
         return false;
-    }
-    public boolean IsFull()
-    {
-        return false;
-    }
-    @Override
-    protected Object clone ()
-    {
+     }
 
-    }
+    public boolean IsFull() {
 
-    @Override
-    public boolean hasNext() {
-        return false;  //To change body of implemented methods use File | Settings | File Templates.
+        for (Square s : squares)
+        {
+            if (s.getMark() == Mark.Open)
+                return false;
+        }
+        return true;
     }
 
     @Override
-    public Object next() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    protected Object clone() {
+       Board newBoard = new Board();
+
+        for (int i = 0; i < 9; i++)
+        {
+            newBoard.squares[i].setMark(this.squares[i].getMark());
+            newBoard.squares[i].setIndex(this.squares[i].getIndex());
+        }
+        newBoard.setMark(this.getMark());
+
+        return newBoard;
     }
 
-    @Override
-    public void remove() {
-        //To change body of implemented methods use File | Settings | File Templates.
+    public Square[] getSquares() {
+        return squares;
     }
 
-    /*
+    public void setSquares(Square[] squares) {
+        this.squares = squares;
+    }
 
-   +GetValidMoves():int[]
-   +Evaluate(Mark):bool
-   +IsFull():bool
-   +Clone():object
-   +GetEnumerator:IEnumerator<Square> */
+    public Mark getMark() {
+        return mark;
+    }
 
+    public void setMark(Mark mark) {
+        this.mark = mark;
+    }
 }
