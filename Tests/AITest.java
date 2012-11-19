@@ -18,7 +18,7 @@ public class AITest {
         Board testBoard = new Board();
         testBoard.getSquares()[4].setMark(Mark.X);
 
-        assertEquals("Error 1! AI move not what it's supposed to be!", 0, testAI.solve(testBoard));
+        assertEquals("Error! AI move not what it's supposed to be!", 0, testAI.solve(testBoard));
 
     }
 }
